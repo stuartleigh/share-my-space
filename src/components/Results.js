@@ -7,11 +7,11 @@ export default class Results extends Component {
     return (
       <div className='container'>
         <h3 className='results-text'>{'Recommended:'}</h3>
-        <Result />
+        <Result type="airbb" value={4564} />
         <div className='horizontal-separator' />
         <h3 className='results-text'>{'Alternatives:'}</h3>
-        <Result />
-        <Result />
+        <Result type="coworking" value={2332} />
+        <Result type="appearHere" value={1222} />
       </div>
     )
   }
