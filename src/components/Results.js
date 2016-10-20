@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { getResults } from '../selectors';
+import { getRecommendedResult, getAlternativeResults } from '../selectors';
 
 import Result from './Result';
 
@@ -22,6 +22,6 @@ export class Results extends Component {
 }
 
 export default connect((state) => ({
-  recommendedResult: getRecommendedResults(state),
+  recommendedResult: getRecommendedResult(state),
   alternativeResults: getAlternativeResults(state),
 }), {})(Results)

@@ -25,8 +25,7 @@ export const requestError = (requestKey, data: Object): Object => {
 
 export const fetchResults = ({size, postCode}) => dispatch => {
   dispatch(requestData(RequestKeys.FETCH_RESULTS))
-  //fetch(`localhost:8080/api/suggestions?postcode=postCode&sqft=size`)
-  fetch('https://jsonplaceholder.typicode.com/users')
+  fetch(`http://localhost:8000/api/suggestions?postcode=${postCode}&sqft=${size}`)
     .then(response => response.json())
     .then(result => {
       if (result.success || true) {
