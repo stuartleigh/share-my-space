@@ -23,6 +23,8 @@ export default class Result extends Component {
   render () {
     const { type, value } = this.props;
 
+    var formatted_value = value.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
+
     return (
       <div className="result-container">
         <div className='col-md-6'>
@@ -32,7 +34,7 @@ export default class Result extends Component {
             <div className='result-title'>{titles[type]}</div>
             <div className='result-paragraph'>{paragraphs[type]}</div>
             <div>
-                <div className='result-amount'>£{value}</div>
+                <div className='result-amount'>£{formatted_value}</div>
                 <div className='result-explainer'>estimated monthly revenue</div>
             </div>
             <a href={links[type]}><button className='result-button' type='button'>Show Me How</button></a>
