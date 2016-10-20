@@ -1,25 +1,40 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from "react-redux";
+import { Provider, connect } from "react-redux";
 
 import configureStore from "./configure-store";
 import Header from './components/Header';
 import Intro from './components/Intro';
 import Form from './components/Form';
+import { getRequest } from './selectors';
+import { RequestKeys } from './constants';
 
 const store = configureStore();
 
-class App extends Component {
+class AppContainer extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div>
-          <Header />
-          <Form />
-        </div>
+        <App />
       </Provider>
     );
   }
 }
 
-ReactDOM.render(<App/>, document.getElementById('App'));
+class AppComponent extends Component {
+  render () {
+    const { request } = this.props;
+    return (
+      <div>
+        <Header />
+        {request.done ? <Results /> : <Form />}
+      </div>
+    )
+  }
+}
+
+const App = connect((state) => ({
+  request: getRequest(RequestKeys.FETCH_RESULTS)(state),
+}), {})(AppComponent)
+
+ReactDOM.render(<AppContainer />, document.getElementById('App'));

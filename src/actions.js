@@ -23,10 +23,17 @@ export const requestError = (requestKey, data: Object): Object => {
   };
 };
 
-export const fetchResults = () => dispatch => {
+export const fetchResults = ({size, postCode}) => dispatch => {
   dispatch(requestData(RequestKeys.FETCH_RESULTS))
+  //fetch(`localhost:8080/api/suggestions?postcode=postCode&sqft=size`)
   fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
-    //.then(result => dispatch(receiveData(RequestKeys.FETCH_RESULTS, {result})))
-    //.catch(error => dispatch(requestError(RequestKeys.FETCH_RESULTS, {error})))
+    .then(result => {
+      if (result.success || true) {
+        dispatch(receiveData(RequestKeys.FETCH_RESULTS, {data: {airbb: 1200, coworking: 1000, appearHere: 1100}}))
+      } else {
+        dispatch(requestError(RequestKeys.FETCH_RESULTS, {error: "error fetching results"}))
+      }
+    })
+    .catch(error => dispatch(requestError(RequestKeys.FETCH_RESULTS, {error})))
 }

@@ -1,5 +1,6 @@
 import { Actions, RequestKeys, RequestStatus } from './constants';
 import RequestRecord from './records/RequestRecord';
+import ResultsRecord from './records/ResultsRecord';
 
 
 export default (state, action) => {
@@ -15,7 +16,8 @@ export default (state, action) => {
       s.setIn(['requests', action.requestKey], new RequestRecord({status: RequestStatus.DONE}));
 
       switch (action.requestKey) {
-      case RequestKeys.FETCH_USERS:
+      case RequestKeys.FETCH_RESULTS:
+        s.set('results', new ResultsRecord(action.data.data))
         break;
       }
     });
