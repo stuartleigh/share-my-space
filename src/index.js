@@ -8,7 +8,7 @@ import Intro from './components/Intro';
 import Form from './components/Form';
 import { getRequest } from './selectors';
 import { RequestKeys } from './constants';
-import Result from './components/Result';
+import Results from './components/Results';
 
 const store = configureStore();
 
@@ -28,7 +28,7 @@ class AppComponent extends Component {
     return (
       <div>
         <Header />
-        {request.done ? <Result /> : <Form />}
+        {request.done || true ? <Results /> : <Form />}
       </div>
     )
   }

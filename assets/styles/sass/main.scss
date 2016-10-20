@@ -222,87 +222,93 @@ header.header {
   }
 }
 
+.container {
+  margin-top: 100px;
+}
+
 .result-container{
-width:80%;
-margin-top:170px;
-height:500px;
-margin-left:auto;
-margin-right:auto;
-display:block;
+  width:80%;
+  height:500px;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
 }
 
 .results-text{
-font-family:'Proxima-Thin';
-color:$green;
-margin-bottom:20px;
-font-size:1.2em;
+  font-family:'Proxima-Thin';
+  color:$green;
+  margin-bottom:20px;
+  font-size:1.2em;
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .result-title{
-font-size:1.1em;
-color:$light-text;
-padding-left:60px;
-font-family:$default-bold;
+  font-size:1.1em;
+  color:$light-text;
+  padding-left:60px;
+  font-family:$default-bold;
 }
 .result-paragraph{
-padding-left:60px;
-color:#95989A;
-font-family:$default-font;
-line-height:1.4em;
-font-size:1em;
-margin-top:15px;
+  padding-left:60px;
+  color:#95989A;
+  font-family:$default-font;
+  line-height:1.4em;
+  font-size:1em;
+  margin-top:15px;
 }
 .image-banner{
-width:120px;
-color:white;
-font-family:$default-font;
-margin-bottom:10px;
-height:30px;
-background:$green;
-z-index: 10;}
+  width:120px;
+  color:white;
+  font-family:$default-font;
+  margin-bottom:10px;
+  height:30px;
+  background:$green;
+  z-index: 10;
+}
 
 .result-amount{
-font-size:1.6em;
-color:#767676;
-font-family:$default-bold;
-float:left;
-padding-left:60px;
-margin-right:11px;
-margin-top:20px;
+  font-size:1.6em;
+  color:#767676;
+  font-family:$default-bold;
+  float:left;
+  padding-left:60px;
+  margin-right:11px;
+  margin-top:20px;
 }
 
 .result-explainer{
-font-size:1em;
-color:#767676;
-padding-top:25px;
-font-family:$default-font;
+  font-size:1em;
+  color:#767676;
+  padding-top:25px;
+  font-family:$default-font;
 }
 .result-image{
-width:100%;
-height:100%;
-z-index:1;
+  width:100%;
+  height:100%;
+  z-index:1;
 }
 .result-button{
-width:150px;
-cursor:pointer;
-height:50px;
-color:white;
-background:$green;
-font-family:$default-font;
-border:0px;
-float:left;
-margin-top:35px;
-margin-left:-142px;
-font-size:1.1em;
+  width:150px;
+  cursor:pointer;
+  height:50px;
+  color:white;
+  background:$green;
+  font-family:$default-font;
+  border:0px;
+  float:left;
+  margin-top:35px;
+  margin-left:-142px;
+  font-size:1.1em;
 }
 
 .result-button:hover{
-background:#06C457;
+  background:#06C457;
 }
 .col-md-6{
-width:50%;
-padding:0px;
-margin:0px;
-float:left;
+  width:50%;
+  padding:0px;
+  margin:0px;
+  float:left;
 }
-
