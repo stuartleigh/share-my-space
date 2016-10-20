@@ -1,0 +1,112 @@
+$white: #F5F5F5;
+$black: #1C292D;
+$placeholder: #C3C3C3;
+$disabled: #E6E6E6;
+$active: #A1E39E;
+
+body, html {
+  background: $white;
+  color: $black;
+  padding: 0;
+  margin: 0;
+  font-family: 'Droid Serif', serif;
+}
+
+header.header {
+  padding: 2em;
+  margin: 0 1em;
+  border-bottom: 1px solid $black;
+
+  h1.logo {
+    margin: 0;
+    font-size: 48px;
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+.form {
+  padding: 3em;
+  max-width: 900px;
+  text-align: center;
+
+  h2 {
+    margin: 0;
+    font-size: 72px;
+    font-family: 'Droid Serif', serif;
+    font-weight: 700;
+    line-height: 1.3em;
+    text-align: left;
+  }
+
+  &__input {
+    color: $black;
+    border: none;
+    border-bottom: 1px dotted $placeholder;
+    font-weight: 400;
+    font-size: 72px;
+    font-family: 'Droid Serif', serif;
+    line-height: 1.3em;
+    background: transparent;
+    outline: none;
+
+    &::-webkit-input-placeholder {
+      color: $placeholder;
+    }
+
+    &::-moz-placeholder {
+      color: $placeholder;
+    }
+
+    &--size {
+      width: 205px;
+    }
+
+    &--post-code {
+      width: 360px;
+    }
+  }
+
+  &__selector {
+    color: $placeholder;
+    font-weight: 400;
+
+    &-option {
+      border-bottom: 1px dotted $placeholder;
+      cursor: pointer;
+
+      &--active {
+        color: $black;
+      }
+
+      &--disabled {
+        text-decoration: line-through;
+      }
+    }
+
+    &-separator {
+      font-style: italic;
+      font-size: 32px;
+      display: inline-block;
+      margin: 0 0.5em;
+    }
+  }
+
+  &__button {
+    font-size: 42px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    padding: 0.5em 1em;
+    color: $black;
+    border: none;
+    border-radius: 4px;
+    background: $disabled;
+    margin: 1.5em 0;
+    text-transform: uppercase;
+    cursor: wait;
+
+    &--active {
+      background: $active;
+      cursor: pointer;
+    }
+  }
+}

@@ -5,7 +5,7 @@ export const Actions = {
 };
 
 export const RequestKeys = {
-  FETCH_USERS: 'FETCH_USERS',
+  FETCH_RESULTS: 'FETCH_RESULTS',
 }
 
 export const RequestStatus = {

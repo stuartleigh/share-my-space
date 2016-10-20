@@ -1,3 +1,3 @@
-export const getUsers = state => state.get('users');
+import RequestRecord from './records/RequestRecord';
 
-export const getUser = id => state => state.getIn(['users', id]);
+export const getRequest = key => state => state.getIn(['requests', key], new RequestRecord());

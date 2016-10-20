@@ -1,4 +1,4 @@
-import { Actions, RequestKeys } from '../constants';
+import { Actions, RequestKeys } from './constants';
 
 export const requestData = (requestKey): Object => {
   return {
@@ -23,10 +23,10 @@ export const requestError = (requestKey, data: Object): Object => {
   };
 };
 
-export const fetchUsers = () => dispatch => {
-  dispatch(requestData(RequestKeys.FETCH_USERS))
+export const fetchResults = () => dispatch => {
+  dispatch(requestData(RequestKeys.FETCH_RESULTS))
   fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
-    .then(result => dispatch(receiveData(RequestKeys.FETCH_USERS, {result})))
-    .catch(error => dispatch(requestError(RequestKeys.FETCH_USERS, {error})))
+    //.then(result => dispatch(receiveData(RequestKeys.FETCH_RESULTS, {result})))
+    //.catch(error => dispatch(requestError(RequestKeys.FETCH_RESULTS, {error})))
 }
