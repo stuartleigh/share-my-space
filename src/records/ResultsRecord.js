@@ -23,7 +23,7 @@ export default class RequestRecord extends Record({
 
   getAlternativeTypes () {
     const types = ['airbb', 'appearHere', 'coworking']
-    return types.filter(t => t !== this.getRecommendedType()).sort((a, b) => this[a] - this[b]);
+    return types.filter(t => t !== this.getRecommendedType()).sort((a, b) => this[b] - this[a]);
   }
 
   get recommended () {

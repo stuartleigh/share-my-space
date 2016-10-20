@@ -10,9 +10,9 @@ const images = {
     appearHere:'../../assets/images/main3.png'
 }
 const links = {
-    airbb:'https://www.airbnb.co.uk/host?from_nav=1&link=1',
-    coworking:'https://nomadspace.co.uk/spaces/london-coworking-spaces?gclid=CjwKEAjw1qHABRDU9qaXs4rtiS0SJADNzJisWkZ628iYbLgkGhq2MjbX60l_Z3J4I2XjafIyGWnbpBoCHFnw_wcB',
-    appearHere:'../../assets/images/main3.jpg'
+    airbb:'https://www.airbnb.co.uk/host',
+    coworking:'https://hubblehq.com/host',
+    appearHere:'https://www.appearhere.co.uk/landlord-enquiries/new'
 }
 export default class Result extends Component {
   render () {
