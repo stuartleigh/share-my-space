@@ -1,4 +1,6 @@
 import { Actions, RequestKeys, RequestStatus } from './constants';
+import RequestRecord from './records/RequestRecord';
+
 
 export default (state, action) => {
   switch (action.type) {

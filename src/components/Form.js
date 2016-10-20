@@ -19,6 +19,7 @@ export class Form extends Component {
       postCode: '',
       spaceType: undefined,
     }
+    this._handleSubmit = this._handleSubmit.bind(this);
   }
 
   _toggleSpaceType (spaceType) {
@@ -60,12 +61,12 @@ export class Form extends Component {
           <input className="form__input form__input--post-code" placeholder="post code" onChange={event => this.setState({postCode: event.target.value})} />
           {"."}
         </h2>
-        <button className={classNames("form__button", valid && "form__button--active")} onClick={() => this._handleSubmit}>What should I do with it?</button>
+        <button className={classNames("form__button", valid && "form__button--active")} onClick={this._handleSubmit}>What should I do with it?</button>
       </section>
     );
   }
 }
 
 export default connect((state) => ({
-  request: getRequest(RequestKeys.GET_RESULTS)(state),
+  request: getRequest(RequestKeys.FETCH_RESULTS)(state),
 }), { fetchResults })(Form)
