@@ -6,6 +6,8 @@ import configureStore from "./configure-store";
 import Header from './components/Header';
 import Intro from './components/Intro';
 import Form from './components/Form';
+import Result from './components/Result';
+
 
 const store = configureStore();
 
@@ -15,7 +17,7 @@ class App extends Component {
       <Provider store={store}>
         <div>
           <Header />
-          <Form />
+          <Result />
         </div>
       </Provider>
     );

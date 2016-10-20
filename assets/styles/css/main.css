@@ -1,3 +1,7 @@
+.container {
+  width: 100%;
+  padding: 10px; }
+
 body, html {
   background: #FFFFFF;
   padding: 0;
@@ -148,3 +152,82 @@ header.header {
   20% {
     transform: scaleY(1);
     -webkit-transform: scaleY(1); } }
+
+.result-container {
+  width: 80%;
+  margin-top: 170px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
+
+.results-text {
+  font-family: 'Proxima-Thin';
+  color: #07E565;
+  margin-bottom: 20px;
+  font-size: 1.2em; }
+
+.result-title {
+  font-size: 1.1em;
+  color: #767676;
+  padding-left: 60px;
+  font-family: "Proxima-Bold"; }
+
+.result-paragraph {
+  padding-left: 60px;
+  color: #95989A;
+  font-family: "Proxima-Regular";
+  line-height: 1.4em;
+  font-size: 1em;
+  margin-top: 15px; }
+
+.image-banner {
+  width: 120px;
+  color: white;
+  font-family: "Proxima-Regular";
+  margin-bottom: 10px;
+  height: 30px;
+  background: #07E565;
+  z-index: 10; }
+
+.result-amount {
+  font-size: 1.6em;
+  color: #767676;
+  font-family: "Proxima-Bold";
+  float: left;
+  padding-left: 60px;
+  margin-right: 11px;
+  margin-top: 20px; }
+
+.result-explainer {
+  font-size: 1em;
+  color: #767676;
+  padding-top: 25px;
+  font-family: "Proxima-Regular"; }
+
+.result-image {
+  width: 100%;
+  height: 100%;
+  z-index: 1; }
+
+.result-button {
+  width: 150px;
+  cursor: pointer;
+  height: 50px;
+  color: white;
+  background: #07E565;
+  font-family: "Proxima-Regular";
+  border: 0px;
+  float: left;
+  margin-top: 35px;
+  margin-left: -142px;
+  font-size: 1.1em; }
+
+.result-button:hover {
+  background: #06C457; }
+
+.col-md-6 {
+  width: 50%;
+  padding: 0px;
+  margin: 0px;
+  float: left; }
