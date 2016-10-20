@@ -14,6 +14,11 @@ const links = {
     coworking:'https://hubblehq.com/host',
     appearHere:'https://www.appearhere.co.uk/landlord-enquiries/new'
 }
+const paragraphs = {
+  airbb: "Make the most of the space you live in, love it, share it and make new friends in the process. AirBandB allows you to fling open your doors and rent out space in your home for different periods of time - be it a night, week or even a bit longer - Problem solved, you’ll be making extra money in no time!",
+  coworking: "Working on the move is increasingly popular, with ‘flat white loving’ entrepreneurs (in which we include ourselves) propping up every coffee shop this side of Shoreditch, but sometimes it’s nice to have a home. A co-working environment embraces this agility and allows you to think, create and socialise with like minded companies, under one cost effective roof.",
+  appearHere: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley",
+}
 export default class Result extends Component {
   render () {
     const { type, value } = this.props;
@@ -25,7 +30,7 @@ export default class Result extends Component {
         </div>
         <div className='col-md-6'>
             <div className='result-title'>{titles[type]}</div>
-            <div className='result-paragraph'>{"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem"}</div>
+            <div className='result-paragraph'>{paragraphs[type]}</div>
             <div>
                 <div className='result-amount'>£{value}</div>
                 <div className='result-explainer'>estimated monthly revenue</div>
