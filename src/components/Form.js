@@ -52,7 +52,8 @@ export class Form extends Component {
           {" sq. ft. "}
           <span className="form__selector">
             <span className={classNames("form__selector-option", spaceType === COMMERCIAL && "form__selector-option--active", spaceType === RESIDENTIAL && "form__selector-option--disabled")} onClick={() => this._toggleSpaceType(COMMERCIAL)}>commercial</span>
-            <span className="form__selector-separator"> or </span>
+            <span className="form__selector-separator"> or</span>
+            <br/>
             <span className={classNames("form__selector-option", spaceType === RESIDENTIAL && "form__selector-option--active", spaceType === COMMERCIAL && "form__selector-option--disabled")} onClick={() => this._toggleSpaceType(RESIDENTIAL)}>residential</span>
           </span>
           {" space in "}
