@@ -29,6 +29,7 @@ header.header {
   padding:0px 40px 0px 20px;
   width:100%;
   margin: 0 1em;
+  overflow: auto;
 
   h1.logo {
     float:left;
@@ -154,10 +155,11 @@ header.header {
 }
 
 .loading {
-  background: rgba(245, 245, 245, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   height: 600px;
   position: absolute;
   width: 100%;
+  left: 0;
 
   &__inner {
     position: absolute;

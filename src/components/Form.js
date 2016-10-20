@@ -36,8 +36,9 @@ export class Form extends Component {
   }
 
   _handleSubmit () {
-    console.log('submitting')
-    this.props.fetchResults(this.state);
+    if (this._isValid) {
+      this.props.fetchResults(this.state);
+    }
   }
 
   render () {
@@ -46,7 +47,7 @@ export class Form extends Component {
     const valid = this._isValid();
     return (
       <section className="form">
-        {request.started ? <Loading /> : null}
+        {request.started || false ? <Loading /> : null}
         <h2 className="form__text">
           {"I have a "}
           <input className="form__input form__input--size" placeholder="size" onChange={event => this.setState({size: event.target.value})} />
