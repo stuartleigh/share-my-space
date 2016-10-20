@@ -8,6 +8,7 @@ import Intro from './components/Intro';
 import Form from './components/Form';
 import { getRequest } from './selectors';
 import { RequestKeys } from './constants';
+import Result from './components/Result';
 
 const store = configureStore();
 
@@ -27,7 +28,7 @@ class AppComponent extends Component {
     return (
       <div>
         <Header />
-        {request.done ? <Results /> : <Form />}
+        {request.done ? <Result /> : <Form />}
       </div>
     )
   }
