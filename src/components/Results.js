@@ -13,7 +13,7 @@ export class Results extends Component {
       <div className='container'>
         <h3 className='results-text'>{'Recommended:'}</h3>
         <Result type={recommendedResult.type} value={recommendedResult.value} />
-        <div className='horizontal-separator' />
+        <div className='horizontal-separator'></div>
         <h3 className='results-text'>{'Alternatives:'}</h3>
         {alternatives}
       </div>
