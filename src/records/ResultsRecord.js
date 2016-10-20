@@ -8,11 +8,26 @@ export default class RequestRecord extends Record({
   coworking: undefined,
 }) {
   get recommended () {
-    debugger;
-    return this.status === RequestStatus.DONE;
+    return {
+      type: 'airbb',
+      value: 4233,
+    }
   }
 
   get alternatives () {
-    return this.status === RequestStatus.FAILED;
+    return [
+      {
+        type: 'coworking',
+        value: 2766,
+      },
+      {
+        type: 'appearHere',
+        value: 1233,
+      }
+    ]
+  }
+
+  get hasResult () {
+    return this.airbb && this.appearHere && this.coworking;
   }
 }
