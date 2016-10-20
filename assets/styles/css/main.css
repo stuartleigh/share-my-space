@@ -214,7 +214,7 @@ header.header {
 
 .result-image {
   width: 100%;
-  height: 100%;
+  height: 345px;
   z-index: 1; }
 
 .result-button {
@@ -227,7 +227,7 @@ header.header {
   border: 0px;
   float: left;
   margin-top: 35px;
-  margin-left: -142px;
+  margin-left: -85px;
   font-size: 1.1em; }
 
 .result-button:hover {

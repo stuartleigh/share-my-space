@@ -8,6 +8,7 @@ export default class RequestRecord extends Record({
   coworking: undefined,
 }) {
   get recommended () {
+    debugger;
     return {
       type: 'airbb',
       value: 4233,
