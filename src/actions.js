@@ -29,7 +29,7 @@ export const fetchResults = ({size, postCode}) => dispatch => {
     .then(response => response.json())
     .then(result => {
       if (result.success || true) {
-        dispatch(receiveData(RequestKeys.FETCH_RESULTS, {data: {airbb: 1200, coworking: 1000, appearHere: 1100}}))
+        dispatch(receiveData(RequestKeys.FETCH_RESULTS, {data: result.data}))
       } else {
         dispatch(requestError(RequestKeys.FETCH_RESULTS, {error: "error fetching results"}))
       }

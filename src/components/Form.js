@@ -59,7 +59,7 @@ export class Form extends Component {
             <span className={classNames("form__selector-option", spaceType === RESIDENTIAL && "form__selector-option--active", spaceType === COMMERCIAL && "form__selector-option--disabled")} onClick={() => this._toggleSpaceType(RESIDENTIAL)}>residential</span>
           </span>
           {" space in "}
-          <input className="form__input form__input--post-code" placeholder="post code" onChange={event => this.setState({postCode: event.target.value})} />
+          <input className="form__input form__input--post-code" placeholder="post code" onChange={event => this.setState({postCode: event.target.value.replace(" ", "")})} />
           {"."}
         </h2>
         <button className={classNames("form__button", valid && "form__button--active")} onClick={this._handleSubmit}>What should I do with it?</button>

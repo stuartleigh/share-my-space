@@ -7,28 +7,41 @@ export default class RequestRecord extends Record({
   appearHere: undefined,
   coworking: undefined,
 }) {
+
+  getRecommendedType () {
+    const { airbb, appearHere, coworking } = this;
+    if (airbb > appearHere && airbb > coworking) {
+      return 'airbb';
+    }
+    if (appearHere > airbb && appearHere > coworking) {
+      return 'appearHere';
+    }
+    if (coworking > airbb && coworking > appearHere) {
+      return 'coworking';
+    }
+  }
+
+  getAlternativeTypes () {
+    const types = ['airbb', 'appearHere', 'coworking']
+    return types.filter(t => t !== this.getRecommendedType()).sort((a, b) => this[a] - this[b]);
+  }
+
   get recommended () {
-    debugger;
+    const type = this.getRecommendedType();
     return {
-      type: 'airbb',
-      value: 4233,
+      type,
+      value: this[type],
     }
   }
 
   get alternatives () {
-    return [
-      {
-        type: 'coworking',
-        value: 2766,
-      },
-      {
-        type: 'appearHere',
-        value: 1233,
-      }
-    ]
+    return this.getAlternativeTypes().map(t => ({
+      type: t,
+      value: this[t],
+    }))
   }
 
   get hasResult () {
-    return this.airbb && this.appearHere && this.coworking;
+    return this.airbb || this.appearHere || this.coworking;
   }
 }
