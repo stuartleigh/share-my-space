@@ -108,12 +108,16 @@ header.header {
   height: 600px;
   position: absolute;
   width: 100%;
-  left: 0; }
+  left: 0;
+  font-family: "Proxima-Bold";
+  color: #07E565; }
   .loading__inner {
     position: absolute;
     top: 50%;
     transform: translateY(-50%) translateX(-50%);
     left: 50%; }
+  .loading__text {
+    transform: matrix(1, 0, 0, 1, 1500, 0); }
 
 .spinner {
   margin: 0 auto;
@@ -122,7 +126,7 @@ header.header {
   text-align: center;
   font-size: 10px; }
   .spinner__rect {
-    background-color: #333;
+    background-color: #07E565;
     height: 100%;
     width: 6px;
     display: inline-block;

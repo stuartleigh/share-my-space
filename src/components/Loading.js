@@ -25,16 +25,17 @@ export class Loading extends Component {
     this.addAnimation(({target}) => {
       var text = target.find({name: 'text'})
 
-      return new TimelineMax({repeat: -1, onRepeat: this.changeText})
-        .from(text, 2, {x: '+=1500'})
-        .to(text, 2, {x: '-=1500'});
+      return new TimelineMax({repeat: -1})
+        .to(text, 1, {x: '0', ease: Power3.easeOut})
+        .to(text, 1, {x: '-1200', delay: '2', ease: Power3.easeIn})
+        .to(text, 0, {x: '1200'});
     });
   }
 
   changeText () {
+    console.log('changeText');
     const text = TEXTS[Math.floor(Math.random() * TEXTS.length)];
     this.setState({text});
-    console.log('repeating')
   }
 
   render () {

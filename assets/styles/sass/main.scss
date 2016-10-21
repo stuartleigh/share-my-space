@@ -160,12 +160,18 @@ header.header {
   position: absolute;
   width: 100%;
   left: 0;
+  font-family: $default-bold;
+  color: $green;
 
   &__inner {
     position: absolute;
     top: 50%;
     transform: translateY(-50%) translateX(-50%);
     left: 50%;
+  }
+
+  &__text {
+    transform: matrix(1, 0, 0, 1, 1500, 0)
   }
 }
 
@@ -177,7 +183,7 @@ header.header {
   font-size: 10px;
 
   &__rect {
-    background-color: #333;
+    background-color: $green;
     height: 100%;
     width: 6px;
     display: inline-block;
